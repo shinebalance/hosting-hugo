@@ -1,0 +1,51 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on notes</title>
+    <link>https://shinebalance.github.io/hosting-hugo/posts/</link>
+    <description>Recent content in Posts on notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MIT</copyright>
+    <lastBuildDate>Sun, 07 Mar 2021 11:51:54 +0900</lastBuildDate>
+    
+        <atom:link href="https://shinebalance.github.io/hosting-hugo/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>memo:HUGO雑感</title>
+      <link>https://shinebalance.github.io/hosting-hugo/posts/test-post/</link>
+      <pubDate>Sun, 07 Mar 2021 11:51:54 +0900</pubDate>
+      
+      <guid>https://shinebalance.github.io/hosting-hugo/posts/test-post/</guid>
+      <description>&lt;h1 id=&#34;hugo雑感雑な感想&#34;&gt;HUGO雑感(雑な感想)&lt;/h1&gt;
+&lt;p&gt;(´・ω・｀)やぁ。&lt;/p&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;デザインテンプレートを拝借しながら静的サイトを簡易に作る方法を探して、HUGOを2時間ほど動かしてみた&lt;/li&gt;
+&lt;li&gt;初〜中級エンジニアが使うには良いツールだと思う。が、誰しもにフィットするものでも無い気がした。&lt;/li&gt;
+&lt;li&gt;今後も使うかは正直わからない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pros&#34;&gt;Pros&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;シャレオツなTheme&lt;/a&gt;が結構用意されてる。自分はデザインセンス無いので、こういうの選べるの結構楽しい&lt;/li&gt;
+&lt;li&gt;Markdownベースで記述できる。自分のように普段のメモをMarkdownで取る習慣の有る人間にはバッチリ。運用に慣れれば、手元にMarkdownメモを残す→公開のサイクルをクルクル回せそう&lt;/li&gt;
+&lt;li&gt;GoLangベースだが、別にGoの知識いらない。&lt;code&gt;config.toml&lt;/code&gt;の設定と、あとはメタ構文的なものを覚えたら終わり。逆に言うとGoに興味を持ってるからHUGOを使う、というものでもない&lt;/li&gt;
+&lt;li&gt;マネージドサービスと比較すると、静的サイトの配信方法など自分で考えるポイントが有り、勉強になる。当たり前の人にとっては当たり前の知識であるとは思うが。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cons&#34;&gt;Cons&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;別にはてなblogとかMediumでいいんじゃね？と思ったら負け。&lt;/li&gt;
+&lt;li&gt;考えようによっては中途半端。自前サーバWordpress〜はてブロの真ん中くらいの労力を進んで取りたいかどうか。&lt;/li&gt;
+&lt;li&gt;以下は自分のスキル不足に端緒してる気もするが、メモ
+&lt;ul&gt;
+&lt;li&gt;うまいことホットリロードが効かない&lt;/li&gt;
+&lt;li&gt;今回使ったbentoは&lt;code&gt;hugo server&lt;/code&gt;じゃなくて&lt;code&gt;npm run dev&lt;/code&gt;で開発サーバ見てくれっって書いてあるけど、なんでだろう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;eof&#34;&gt;EOF&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

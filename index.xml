@@ -1,0 +1,50 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notes</title>
+    <link>https://shinebalance.github.io/hosting-hugo/</link>
+    <description>Recent content on notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MIT</copyright>
+    <lastBuildDate>Sun, 07 Mar 2021 11:51:54 +0900</lastBuildDate>
+    
+        <atom:link href="https://shinebalance.github.io/hosting-hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Posts</title>
+      <link>https://shinebalance.github.io/hosting-hugo/posts/</link>
+      <pubDate>Sun, 07 Mar 2021 11:51:54 +0900</pubDate>
+      
+      <guid>https://shinebalance.github.io/hosting-hugo/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Archives</title>
+      <link>https://shinebalance.github.io/hosting-hugo/archives/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shinebalance.github.io/hosting-hugo/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://shinebalance.github.io/hosting-hugo/about/</link>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shinebalance.github.io/hosting-hugo/about/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://shinebalance.github.io/hosting-hugo/images/about.jpg&#34; alt=&#34;this is&amp;hellip;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name:　shinebalance / hook.tack&lt;/li&gt;
+&lt;li&gt;favorite : Deep Learning/Cloud/Database/&lt;/li&gt;
+&lt;li&gt;hatena-blog  : &lt;a href=&#34;https://shine-bal.hatenablog.com/&#34;&gt;https://shine-bal.hatenablog.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;twitter : &lt;a href=&#34;https://twitter.com/shine_Notes&#34;&gt;https://twitter.com/shine_Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;speaker&amp;rsquo;s deck : &lt;a href=&#34;https://speakerdeck.com/shinebalance&#34;&gt;https://speakerdeck.com/shinebalance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

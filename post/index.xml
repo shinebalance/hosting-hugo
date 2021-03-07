@@ -1,0 +1,14 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on notes</title>
+    <link>https://shinebalance.github.io/hosting-hugo/post/</link>
+    <description>Recent content in Posts on notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MIT</copyright>
+    
+        <atom:link href="https://shinebalance.github.io/hosting-hugo/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

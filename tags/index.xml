@@ -1,0 +1,23 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on notes</title>
+    <link>https://shinebalance.github.io/hosting-hugo/tags/</link>
+    <description>Recent content in Tags on notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MIT</copyright>
+    
+        <atom:link href="https://shinebalance.github.io/hosting-hugo/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>index</title>
+      <link>https://shinebalance.github.io/hosting-hugo/tags/index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shinebalance.github.io/hosting-hugo/tags/index/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
