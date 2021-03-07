@@ -6,10 +6,68 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Sun, 07 Mar 2021 11:51:54 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 07 Mar 2021 19:39:00 +0900</lastBuildDate>
     
         <atom:link href="https://shinebalance.github.io/hosting-hugo/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>memo:RustのHello worldメモ</title>
+      <link>https://shinebalance.github.io/hosting-hugo/posts/rustmemo20210307/</link>
+      <pubDate>Sun, 07 Mar 2021 19:39:00 +0900</pubDate>
+      
+      <guid>https://shinebalance.github.io/hosting-hugo/posts/rustmemo20210307/</guid>
+      <description>&lt;h1 id=&#34;rust爆速hello-world雑メモ&#34;&gt;Rust爆速Hello world/雑メモ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;雑にやったことをメモっていく。雑感(雑な所感)の記録を目的とするため、読めば分かる系の細かな手順は省く。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;やること&#34;&gt;やること&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ハロワ&lt;/li&gt;
+&lt;li&gt;Rocketを動かす&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;モチベーション&#34;&gt;モチベーション&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;いいかげんC++レイヤの言語を覚えたい、でも今っぽいのが良い&lt;/li&gt;
+&lt;li&gt;とりあえず動かしてみようの巻&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hello-world&#34;&gt;Hello World!&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参照リンク
+&lt;a href=&#34;https://www.rust-lang.org/ja/learn/get-started&#34;&gt;https://www.rust-lang.org/ja/learn/get-started&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;飽きたらお気軽に売買したいので、&lt;code&gt;brew install rust&lt;/code&gt;で導入。1.5.0が入る。&lt;/li&gt;
+&lt;li&gt;コマンドは&lt;code&gt;rustc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;コマンドのサイクルは&lt;code&gt;cargo new [hoge]&lt;/code&gt;(プロジェクト作成)&amp;raquo;&lt;code&gt;cargo build&lt;/code&gt;(ビルド)&amp;raquo;&lt;code&gt;cargo run&lt;/code&gt;(実行)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cargo build&lt;/code&gt;抜かしてrunしてみたけど、toml参照してInstallしてくれるのね&lt;/li&gt;
+&lt;li&gt;カニにハロワ言わせる(&lt;code&gt;ferris_says&lt;/code&gt;)だけの時点で既に結構楽しい&lt;/li&gt;
+&lt;li&gt;そしてferris-says、思ったより&lt;a href=&#34;https://github.com/mgattozzi/ferris-says&#34;&gt;ソースコード長いやんけ…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rocket&#34;&gt;Rocket&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;公式リンク
+&lt;a href=&#34;https://rocket.rs/&#34;&gt;https://rocket.rs/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;とりあえず身近なテーマでRustを使ってみたいので、あわよくばバックエンドに採用できそうなRocketを動かしてみる&lt;/li&gt;
+&lt;li&gt;さっきいれたRustだとなんか動かないもの出てきたのでrustupごと入れ直し
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.soudegesu.com/post/rust/rust-with-rustup/&#34;&gt;https://www.soudegesu.com/post/rust/rust-with-rustup/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;環境変数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;export CARGO_HOME=&amp;quot;$HOME/.cargo&amp;quot; &amp;gt;&amp;gt; ~/.zshrc
+export PATH=&amp;quot;$CARGO_HOME/bin:$PATH&amp;quot; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;nightlyにしたら動くようになった。&lt;/li&gt;
+&lt;li&gt;Flaskは触ったこと有るのだけど、ちょっと似てる。main.rsだけで結構書けるらしいのでもう少し遊んでみようと思う。&lt;/li&gt;
+&lt;li&gt;なによりPython以外の言語仕様を知る題材としてはけっこう面白い気がした。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;eof&#34;&gt;EOF&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>memo:HUGO雑感</title>

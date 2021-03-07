@@ -33,10 +33,10 @@
   
   
     <meta property="og:type" content="website" />
-    <meta itemprop="description" content="リンク集兼、色々練習用静的サイト" />
-    <meta property="og:description" content="リンク集兼、色々練習用静的サイト" />
-    <meta name="description" content="リンク集兼、色々練習用静的サイト" />
-    <meta name="twitter:description" content="リンク集兼、色々練習用静的サイト" />
+    <meta itemprop="description" content="練習サイト。今の所はblog記事未満の雑メモ置き場。" />
+    <meta property="og:description" content="練習サイト。今の所はblog記事未満の雑メモ置き場。" />
+    <meta name="description" content="練習サイト。今の所はblog記事未満の雑メモ置き場。" />
+    <meta name="twitter:description" content="練習サイト。今の所はblog記事未満の雑メモ置き場。" />
   
 
   <meta property="og:updated_time" content=0001-01-01T00:00:00Z />
@@ -160,6 +160,14 @@
   
   
     <article class="article border-b border-gray-400">
+      <h1><a href="https://shinebalance.github.io/hosting-hugo/posts/rustmemo20210307/" class="no-underline">memo:RustのHello worldメモ</a></h1>
+
+      Rust爆速Hello world/雑メモ  雑にやったことをメモっていく。雑感(雑な所感)の記録を目的とするため、読めば分かる系の細かな手順は省く。  やること  ハロワ Rocketを動かす  モチベーション  いいかげんC++レイヤの言語を覚えたい、でも今っぽいのが良い とりあえず動かしてみようの巻  Hello World!  参照リンク https://www.rust-lang.org/ja/learn/get-started
+  飽きたらお気軽に売買したいので、brew install rustで導入。1.5.0が入る。 コマンドはrustc コマンドのサイクルはcargo new [hoge](プロジェクト作成)&raquo;cargo build(ビルド)&raquo;cargo run(実行) cargo build抜かしてrunしてみたけど、toml参照してInstallしてくれるのね カニにハロワ言わせる(ferris_says)だけの時点で既に結構楽しい そしてferris-says、思ったよりソースコード長いやんけ…  Rocket  公式リンク https://rocket.rs/
+  とりあえず身近なテーマでRustを使ってみたいので、あわよくばバックエンドに採用できそうなRocketを動かしてみる さっきいれたRustだとなんか動かないもの出てきたのでrustupごと入れ直し  https://www.soudegesu.com/post/rust/rust-with-rustup/   環境変数  export CARGO_HOME=&quot;$HOME/.cargo&quot; &gt;&gt; ~/.zshrc export PATH=&quot;$CARGO_HOME/bin:$PATH&quot; &gt;&gt; ~/.zshrc  nightlyにしたら動くようになった。 Flaskは触ったこと有るのだけど、ちょっと似てる。main.rsだけで結構書けるらしいのでもう少し遊んでみようと思う。 なによりPython以外の言語仕様を知る題材としてはけっこう面白い気がした。  EOF 
+    </article>
+  
+    <article class="article border-b border-gray-400">
       <h1><a href="https://shinebalance.github.io/hosting-hugo/posts/test-post/" class="no-underline">memo:HUGO雑感</a></h1>
 
       HUGO雑感(雑な感想) (´・ω・｀)やぁ。
@@ -171,7 +179,7 @@ TL;DR  デザインテンプレートを拝借しながら静的サイトを簡�
 
     </main><footer class="w-full max-w-7xl mx-auto text-center border-t border-gray-200 py-9 px-3 mt-9 pin-b text-sm text-gray-500">
   Made with <a href="https://gohugo.io" class="underline transition duration-300 ease-in-out hover:text-blue-600">Hugo</a> and <a href="https://github.com/leonardofaria/bento" class="underline transition duration-300 ease-in-out hover:text-blue-600">Bento theme</a>. 
-  Copyright © 2020 hook.tack
+  Copyright © 2020 hook.tack/shinebalance
 </footer>
 
 <script>
