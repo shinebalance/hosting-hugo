@@ -6,10 +6,117 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Sun, 07 Mar 2021 19:39:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 13 Mar 2021 13:08:43 +0900</lastBuildDate>
     
         <atom:link href="https://shinebalance.github.io/hosting-hugo/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rust Rocket雑感(Web APIサンプル)</title>
+      <link>https://shinebalance.github.io/hosting-hugo/posts/rustmemo20210313/</link>
+      <pubDate>Sat, 13 Mar 2021 13:08:43 +0900</pubDate>
+      
+      <guid>https://shinebalance.github.io/hosting-hugo/posts/rustmemo20210313/</guid>
+      <description>&lt;h1 id=&#34;rocketお勉強メモ&#34;&gt;Rocketお勉強メモ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;雑にやったことをメモっていく。雑感(雑な所感)の記録を目的とするため、読めば分かる系の細かな手順は省く。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;やること&#34;&gt;やること&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Qiita記事をもとにAPIの実装をやって(写経して)みる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/yukinarit/items/c5128e67d168b4f39983&#34;&gt;Rust RocketでのWebAPIサーバーの書き方を解説してみる&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;モチベーション&#34;&gt;モチベーション&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;とにかく自分の求めてるユースケースに近いサンプルコードを動かして、Rustの言語仕様をちょっとでも理解する。教科書もそのうち読むけど、読むだけで満足しちゃわないために&lt;/li&gt;
+&lt;li&gt;あと、簡易サーバサイドとしてRocketが使えるかどうかの見極め。どうも&lt;code&gt;Actix-web&lt;/code&gt;というのも有るらしく、正直そっちも気になってる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;web-api実装&#34;&gt;Web API実装&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参照リンク
+&lt;a href=&#34;https://qiita.com/yukinarit/items/c5128e67d168b4f39983&#34;&gt;Rust RocketでのWebAPIサーバーの書き方を解説してみる&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;お作法の復習&#34;&gt;お作法の復習&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;まずは&lt;code&gt;cargo new [hogehoge]&lt;/code&gt;、全てはそこから&lt;/li&gt;
+&lt;li&gt;写経の順序としては&lt;code&gt;Cargo.toml&lt;/code&gt;と&lt;code&gt;main.rs&lt;/code&gt;、そこから&lt;code&gt;routers.rs&lt;/code&gt;と&lt;code&gt;modeles.rs&lt;/code&gt;の順になるらしい。&lt;/li&gt;
+&lt;li&gt;ついでにVSCodeのRustのExtensionも入れた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cargotoml&#34;&gt;&lt;code&gt;Cargo.toml&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;serde&lt;/code&gt;ってなに？どうもシリアライズ/デシリアライズ担当らしい。&lt;/li&gt;
+&lt;li&gt;Djangoのシリアライザと役割は似たようなもんなんだろうか&lt;/li&gt;
+&lt;li&gt;一回この時点で&lt;code&gt;cargo build&lt;/code&gt;してみる、ガンガンcrateが入っていく(インテリセンスが入るかもという期待)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mainrs&#34;&gt;&lt;code&gt;main.rs&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mod&lt;/code&gt;と&lt;code&gt;use&lt;/code&gt;の違いはまだよくわからない&lt;/li&gt;
+&lt;li&gt;それ以外は概ねなんとなくわかる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;modelsrs&#34;&gt;&lt;code&gt;models.rs&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DjangoのModelと一緒に見える&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;derive&lt;/code&gt;は継承らしいので、ここで書いたToDo構造体はシリアライザー(Serde？)を通るってことかな&lt;/li&gt;
+&lt;li&gt;だとすると結構お気軽にシリアライザ使えることになるのでありがたい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;routesrs&#34;&gt;&lt;code&gt;routes.rs&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;実際に割り当てたルーティング先の処理を別に書いてる&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;# []&lt;/code&gt;ってRocketの作法なのかな、それともPythonのデコレータみたいなもの？&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Json&amp;lt;Vec&amp;lt;ToDo&amp;gt;&amp;gt;&lt;/code&gt;えっなにこれ……？？？&lt;/li&gt;
+&lt;li&gt;おそらくPythonで言うと&lt;code&gt;json(vec(ToDo))&lt;/code&gt;のことと思われる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cargo-run&#34;&gt;&lt;code&gt;cargo run&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;動いた！&lt;/li&gt;
+&lt;li&gt;今回のサンプル、POSTもらってもファイルの書き込みとかはせず、ただシリアライズしたJSONを返してるだけなのね&lt;/li&gt;
+&lt;li&gt;とはいえちゃんとjsonにできているので、このままMongoDBとかに書き込んだりとかはできそう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;疑問点&#34;&gt;疑問点&lt;/h2&gt;
+&lt;h3 id=&#34;mainrs-1&#34;&gt;&lt;code&gt;main.rs&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#![feature(proc_macro_hygiene)]``#![feature(decl_macro)]/&lt;/code&gt;は毎回有るきがするけど、何をしている？
+&lt;ul&gt;
+&lt;li&gt;→試しにこの2つをコメントアウトして実行した所、&lt;code&gt;#[]&lt;/code&gt;を使っている部分が全てコケた。つまり、この文言によって&lt;code&gt;#[]&lt;/code&gt;の記法を使えるようになるっぽい。&lt;/li&gt;
+&lt;li&gt;もう少し調べてみた。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;proc_macro_hygiene&lt;/code&gt;はprocedural macros&lt;code&gt;decl_macro&lt;/code&gt;はdeclarative macro、宣言的マクロの略らしい。&lt;/li&gt;
+&lt;li&gt;この辺はマクロについてをちゃんと読んだほうが良さそう。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.rust-lang.org/book/ch19-06-macros.html&#34;&gt;Macros&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;いやまて、マクロって関数と違うの？という素朴な疑問
+&lt;ul&gt;
+&lt;li&gt;解説あった、めっちゃおもろい、&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/optim/rust-all-kinds-of-macro&#34;&gt;https://speakerdeck.com/optim/rust-all-kinds-of-macro&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;modelrs&#34;&gt;&lt;code&gt;model.rs&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#[derive(Debug, Serialize, Deserialize)]&lt;/code&gt;はどうやらインターフェイスとしてこの3つを通るという意味っぽい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;routesrs-1&#34;&gt;&lt;code&gt;routes.rs&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Vec&lt;/code&gt;はなんとなくnumpyのndarrayっぽい気がする&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;# [get(&amp;quot;/todos&amp;quot;)]&lt;/code&gt;がよくわからないが、前述のスライドを参照すると「属性マクロ」になるようだ&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;into()&lt;/code&gt;は型変換？らしい…&lt;a href=&#34;https://doc.rust-lang.org/rust-by-example/conversion/from_into.html#into&#34;&gt;参考&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;雑感雑な感想&#34;&gt;雑感(雑な感想)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;うーむ、たった十数行だけど知らないことばかりである。&lt;/li&gt;
+&lt;li&gt;しかし、Python(と、JavaとC#を一瞬)やっただけの人間としてはシンプルに面白く感じるところが多いので、引き続き折を見て触れていこうと思う。&lt;/li&gt;
+&lt;li&gt;ただ1つ気になるのだが、Rustって結構不親切な略称が多い気がする…pub,fn,Vec&amp;hellip;(ある意味古風な言語らしいが)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;eof&#34;&gt;EOF&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>memo:RustのHello worldメモ</title>

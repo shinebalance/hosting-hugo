@@ -39,7 +39,7 @@
     <meta name="twitter:description" content="練習サイト。今の所はblog記事未満の雑メモ置き場。" />
   
 
-  <meta property="og:updated_time" content=2021-03-07T19:39:00&#43;0900 />
+  <meta property="og:updated_time" content=2021-03-13T13:08:43&#43;0900 />
 
   
 
@@ -162,6 +162,14 @@
 <div id="reading-progress-bar" role="presentation" class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div>
 
   
+  
+    <article class="article border-b border-gray-400">
+      <h1><a href="https://shinebalance.github.io/hosting-hugo/posts/rustmemo20210313/" class="no-underline">Rust Rocket雑感(Web APIサンプル)</a></h1>
+
+      Rocketお勉強メモ  雑にやったことをメモっていく。雑感(雑な所感)の記録を目的とするため、読めば分かる系の細かな手順は省く。  やること  Qiita記事をもとにAPIの実装をやって(写経して)みる。   Rust RocketでのWebAPIサーバーの書き方を解説してみる
+ モチベーション  とにかく自分の求めてるユースケースに近いサンプルコードを動かして、Rustの言語仕様をちょっとでも理解する。教科書もそのうち読むけど、読むだけで満足しちゃわないために あと、簡易サーバサイドとしてRocketが使えるかどうかの見極め。どうもActix-webというのも有るらしく、正直そっちも気になってる。  Web API実装  参照リンク Rust RocketでのWebAPIサーバーの書き方を解説してみる
+ お作法の復習  まずはcargo new [hogehoge]、全てはそこから 写経の順序としてはCargo.tomlとmain.rs、そこからrouters.rsとmodeles.rsの順になるらしい。 ついでにVSCodeのRustのExtensionも入れた  Cargo.toml  serdeってなに？どうもシリアライズ/デシリアライズ担当らしい。 Djangoのシリアライザと役割は似たようなもんなんだろうか 一回この時点でcargo buildしてみる、ガンガンcrateが入っていく(インテリセンスが入るかもという期待)  main.rs  modとuseの違いはまだよくわからない それ以外は概ねなんとなくわかる  models.rs  DjangoのModelと一緒に見える deriveは継承らしいので、ここで書いたToDo構造体はシリアライザー(Serde？)を通るってことかな だとすると結構お気軽にシリアライザ使えることになるのでありがたい  routes.rs  実際に割り当てたルーティング先の処理を別に書いてる # []ってRocketの作法なのかな、それともPythonのデコレータみたいなもの？ Json&lt;Vec&lt;ToDo&gt;&gt;えっなにこれ……？？？ おそらくPythonで言うとjson(vec(ToDo))のことと思われる  cargo run  動いた！ 今回のサンプル、POSTもらってもファイルの書き込みとかはせず、ただシリアライズしたJSONを返してるだけなのね とはいえちゃんとjsonにできているので、このままMongoDBとかに書き込んだりとかはできそう  疑問点 main.rs  #![feature(proc_macro_hygiene)]``#![feature(decl_macro)]/は毎回有るきがするけど、何をしている？  →試しにこの2つをコメントアウトして実行した所、#[]を使っている部分が全てコケた。つまり、この文言によって#[]の記法を使えるようになるっぽい。 もう少し調べてみた。  proc_macro_hygieneはprocedural macrosdecl_macroはdeclarative macro、宣言的マクロの略らしい。 この辺はマクロについてをちゃんと読んだほうが良さそう。 Macros   いやまて、マクロって関数と違うの？という素朴な疑問  解説あった、めっちゃおもろい、       https://speakerdeck.
+    </article>
   
     <article class="article border-b border-gray-400">
       <h1><a href="https://shinebalance.github.io/hosting-hugo/posts/rustmemo20210307/" class="no-underline">memo:RustのHello worldメモ</a></h1>
